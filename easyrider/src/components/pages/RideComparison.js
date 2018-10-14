@@ -17,50 +17,6 @@ class GeoLocation extends React.Component {
         renderLyft: false,
         renderUber: false
     }
-    // componentDidMount() {
-    //     let startLat = 37.423021;
-    //     let startLng = -122.083739;
-    //     let endLat = 37.42288983452092;
-    //     let endLng = -122.08438887416338;
-    //     let url = "https://api.lyft.com/v1/cost?ride_type=lyft&start_lat=" + startLat + "&start_lng=" + startLng + "&end_lat=" + endLat + "&end_lng=" + endLng;
-    //     axios.get(url, {
-    //         headers: {
-    //             'Accept': "application/json, text/plain, */*",
-    //             'Access-Control-Allow-Origin': '*',
-    //             'Content-Type': "application/json"
-    //         }
-
-    //     }).then(data => console.log(data))
-    // let currentTemp = localStorage.getItem("currentTemp");
-    // let customerCurrentLocation = localStorage.getItem("customerCurrentLocation");
-    // customerCurrentLocation = JSON.parse(customerCurrentLocation);
-
-    // this.setState({
-    //     customerCurrentLocation: customerCurrentLocation
-    // })
-    // //console.log(customerDestination);
-    // this.setState({
-    //     userWeather: currentTemp
-    // })
-
-    // get address
-    // var address = "11131 66th ave forest hills ny";
-    // const url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyCA7fHKImyZG52ysE_z6vx0IAoNnBc7PqM";
-
-    // //Get lat and long from address
-    // axios(url).then(response => {
-
-    //      var formattedAddress = response.data.results[0].formatted_address;
-    //      //console.log(response.data.results[0]);
-    //      let customerDestination = {
-    //          latitude: response.data.results[0].geometry.location.lat,
-    //          longitude: response.data.results[0].geometry.location.lng
-    //      }
-    //      this.setState({
-    //         customerDestination: customerDestination
-    //     }, () => console.log(this.state))
-    //  })
-    //  }
     componentDidMount() {
         let currentTemp = localStorage.getItem("currentTemp");
         this.setState({ userWeather: currentTemp })
@@ -90,21 +46,6 @@ class GeoLocation extends React.Component {
             let incompatiable = "Geolocation is not supported by this browser.";
             console.log("incompatible" + incompatiable);
         }
-        // // get address
-        // var address = "12 reler lane, somerset, nj 08873";
-        // const url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyCA7fHKImyZG52ysE_z6vx0IAoNnBc7PqM";
-
-        // //Get lat and long from address
-        // axios(url).then(response => {
-        //     // console.log("hello");
-        //     var formattedAddress = response.data.results[0].formatted_address;
-        //     //console.log(response.data.results[0]);
-        //     let customerDestination = {
-        //         latitude: response.data.results[0].geometry.location.lat,
-        //         longitude: response.data.results[0].geometry.location.lng
-        //     }
-        //     // LocalStorage: customer destination
-        //     //localStorage.setItem('customerDestination', JSON.stringify(customerDestination));
     };
     comparePrices = (e) => {
         e.preventDefault();
@@ -318,22 +259,7 @@ class GeoLocation extends React.Component {
                     {this.state.renderLyft && this.renderLyftComparison()}
                     {/* Render Uber */}
                     {this.state.renderUber && this.renderUberComparison()}
-
-                    {/* Rernder Maps */}
-                    {/* < MapContainer /> */}
                 </div>
-                {/* <h3>Uber Estimates</h3>
-                <ul>
-                    {
-                        this.state.uberData.length > 0
-                            ?
-                         
-                            :
-                            ""
-                    }
-                </ul> */}
-
-
 
             </div>
         )

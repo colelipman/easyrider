@@ -25,7 +25,8 @@
   <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
   <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
   <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style type="text/css">
 
     .hidden.menu {
@@ -175,7 +176,7 @@
   <a class="item">Login</a>
   <a class="item">Signup</a>
 </div>
-
+<div id="root"></div>
 
 <!-- Page Contents -->
 <div class="pusher">
@@ -200,9 +201,11 @@
       <h2>Find the right ride for you!</h2>
       <div class="ui huge primary button">Log in<i class="right arrow icon"></i></div>
     </div>
-
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA7fHKImyZG52ysE_z6vx0IAoNnBc7PqM&callback=initMap">
+  </script>
   
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>

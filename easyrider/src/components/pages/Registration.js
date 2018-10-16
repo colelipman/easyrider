@@ -1,5 +1,9 @@
 import React, { Component } from 'react'; 
 import './App.css'; 
+import { render } from 'react-dom';
+
+
+
 class Registration extends Component {
     render () { 
         return ( 
@@ -24,12 +28,17 @@ class Registration extends Component {
             Remember me
             </input>
          
+            
             <button data-component="Cancelbtn" type="button" class="cancelbtn">Cancel</button>
+    
+            
+           
             <button data-component="Signupbtn" type="submit" class="signupbtn">Sign Up</button>
-         
+            
         </div> 
         ); 
     }
 }
+ 
 
 export default Registration; 

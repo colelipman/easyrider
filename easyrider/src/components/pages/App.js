@@ -1,7 +1,12 @@
  import React, { Component } from 'react'; 
  import './App.css'; 
+ import { Link } from 'react-router-dom';
+ 
+ 
  class App extends Component {
-     render () {
+  
+  
+   render () {
          return (
              
              <div className="Login">
@@ -26,9 +31,13 @@
 <h5 className="bottom" data-component="Bottom">
   Don't have an account with us yet?
 </h5>
+
+<Link to="./Registration.js">
 <button className="signup" data-component="Signup">
   Register 
 </button>
+</Link>
+
 </div> 
 
             

@@ -1,5 +1,5 @@
 .log {
-  background-image: url('https://media.giphy.com/media/l4EoPR59UqomvFUKk/giphy.gif');
+  background-image: url('https://media.giphy.com/media/3ohfFH6Evbu6ElsiIw/giphy.gif');
   background-size: cover;
 
 }
@@ -14,7 +14,7 @@
 .head{
   margin-left: 560px; 
   font-family: 'Permanent Marker', cursive;
-  color: red; 
+  color: gold; 
 }
 
 h1 {
@@ -24,7 +24,8 @@ h1 {
 
 h5{
   margin-left: 500px; 
-  color: black;
+  color: gold;
+  margin-top: 100px; 
   
 }
 
@@ -40,11 +41,21 @@ button{
 
 .signup{
   margin-right: 50px;
-  background-color: black;
-  color: white;  
+  background-color: darkgray;
+  color: gold;  
 }
 
 label{
-  color:  black; 
+  color:  gold; 
+  margin-left: 300px; 
+
 }
 
+.u-full-width{
+  width: 800px; 
+  margin-left: 300px; 
+}
+
+.button-primary{
+  margin-left: 50px; 
+}

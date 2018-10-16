@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
-import './App.css'; 
-import { render } from 'react-dom';
+
+//import { render } from 'react-dom';
 
 
 
@@ -9,31 +9,36 @@ class Registration extends Component {
         return ( 
             <div class="container">
     <form class="registration" action="action_page.php"/>
-        <div class="container"/>
+        <div class="added"/>
           <h1 class="registration">Registration</h1>
           <p>Please fill in this form to create an account.</p>
           <hr/>
       
           <label class="elabel" data-component="Elabel" for="email"><b>E-mail</b></label>
-          <input class="email" data-component="Email" type="text" placeholder="Enter Email" name="email" required/>
+          <input class="email" data-component="Email" type="text" placeholder="Enter Email" name="emailInput" required/>
       
           <label class="plabel" data-component="Plabel" for="psw"><b>Password</b></label>
-          <input class="password" data-component="Password" type="password" placeholder="Enter Password" name="psw" required/>
+          <input class="password" data-component="Password" type="password" placeholder="Enter Password" name="passwordInput" required/>
       
           <label class="repeat"  data-component="Repeat" for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password"  data-component="Password" placeholder="Repeat Password" name="psw-repeat" required/>
-      
-          <label/>
-            <input class="box" data-component="Box" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> 
+            
+           
+            {/* <input class="box" data-component="Box" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> 
             Remember me
             </input>
+            </label> */}
          
             
-            <button data-component="Cancelbtn" type="button" class="cancelbtn">Cancel</button>
+            <button data-component="Cancelbtn" type="button" class="cancelbtn">
+           <a href="/"> Cancel</a>
+            </button>
     
             
            
-            <button data-component="Signupbtn" type="submit" class="signupbtn">Sign Up</button>
+            <button data-component="Signupbtn" type="submit" class="signupbtn">
+            <a href="/Home">submit</a>
+            </button>
             
         </div> 
         ); 

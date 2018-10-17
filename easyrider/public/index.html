@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Standard Meta -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -147,24 +146,33 @@
   ;
   </script>
 </head>
-<body>
-
-<!-- Following Menu -->
-<div class="ui large top fixed hidden menu">
-  <div class="ui container">
-    <a class="active item">Home</a>
-    <a class="item">Work</a>
-    <a class="item">Company</a>
-    <a class="item">Careers</a>
-    <div class="right menu">
-      <div class="item">
-        <a class="ui button">Log in</a>
-      </div>
-      <div class="item">
-        <a class="ui primary button">Sign Up</a>
-      </div>
+<body class="log" >
+  
+  <div id="root">
+  <!-- The above form looks like this -->
+<form class="login" data-component="Login">
+    <h1 class="head" data-component="Head" >
+        Easy Rider 
+      </h1>
+  <div class="row" data-component="Row">
+    <div class="six columns" data-component="Six">
+      <label class="mailabel" data-component="Mailabel"for="exampleEmailInput">E-Mail</label>
+      <input class="u-full-width" data-component="Full"  type="email" id="exampleEmailInput">
+    </div>
+    <div class="six columns" data-component="Six">
+      <label class="password" data-component="Password" >Password</label>
+      <input class="u-full-width" data-component="Full" type="password"> 
+      </select>
     </div>
   </div>
+  <input class="button-primary" data-component="Primary" type="submit" value="Submit">
+</form>
+<h5 class="bottom" data-component="Bottom">
+  Don't have an account with us yet?
+</h5>
+<button class="signup" data-component="Signup">
+  Register 
+</button>
 </div>
 
 <!-- Sidebar Menu -->

@@ -232,7 +232,7 @@ class GeoLocation extends React.Component {
                                 <div className="input-field col s12">
                                     <i className="material-icons prefix">place</i>
                                     <input type="text" name="destinationAddress" required value={this.state.address} onChange={this.onChange} />
-                                    <label>Enter your destinationAAAAAAAAAAAAAAAAAAAAAAAA </label>
+                                    <label>Enter your destination </label>
                                 </div>
                             </div>
                         </form>

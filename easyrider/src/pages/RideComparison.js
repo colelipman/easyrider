@@ -18,6 +18,15 @@ class GeoLocation extends React.Component {
     componentDidMount() {
         let currentTemp = localStorage.getItem("currentTemp");
         this.setState({ userWeather: currentTemp })
+        
+        let head = document.getElementsByTagName('head')[0];
+        var link = document.createElement('link');        
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
+        //link.media = 'all';
+        head.appendChild(link);
+        // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
     };
 
 
@@ -198,7 +207,7 @@ class GeoLocation extends React.Component {
                             color: "#0B0A1C"
                         }}>USD {this.state.uberData[this.state.uberData.length - 1].estimate}<a href="https://m.uber.com/ul/?client_id=jXjS0Z2p5GQyxIeJlr99Z13NUu8ZK14E" style={{ color: "#0B0A1C" }}><i className="material-icons right">thumb_up</i></a></p>
                         <p>Click on ... to see more ride types information</p>
-                        <p>Estimated duration: <b>{Math.floor(this.state.uberData[this.state.uberData.length-1].duration)/60} minutes</b></p>
+                        <p>Estimated duration: <b>{Math.floor(this.state.uberData[this.state.uberData.length - 1].duration) / 60} minutes</b></p>
                     </div>
                     <div className="card-reveal">
 
@@ -222,13 +231,13 @@ class GeoLocation extends React.Component {
     }
     render() {
         return (
-            <div className="container" style={{backgroundColor: 'white'}}>
+            <div className="container" style={{ backgroundColor: 'white' }}>
                 <div className="row">
                     <div className="col s8 offset-s2">
                         <h3 className="center-align">Compare Prices</h3>
                         {
                             this.state.userWeather && <p className="center-align">It is currently <b>{this.state.userWeather}</b> F</p>
-                        }                       
+                        }
                         <form className="col s12">
                             <div className="row">
                                 <div className="input-field col s12">

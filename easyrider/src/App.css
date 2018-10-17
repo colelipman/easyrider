@@ -61,10 +61,13 @@ label{
 }
 
 p{
-  color:white; 
+  color: orange; 
   margin-left: 200px ;
 }
 
+.center-align{
+  margin-left: 90px;
+}
 
 .cancelbtn {
   margin-right: 100px; 
@@ -76,7 +79,7 @@ background-color: gold;
 }
 
 b {
-  margin-right: 500px; 
+  margin-right: 10px; 
 }
 
 .signin{

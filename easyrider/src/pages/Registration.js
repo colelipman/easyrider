@@ -14,13 +14,13 @@ class Registration extends Component {
           <p>Please fill in this form to create an account.</p>
           <hr/>
       
-          <label class="elabel" data-component="Elabel" for="email"><b>E-mail</b></label>
+          <label class="elabel" data-component="Elabel" for="email"></label>
           <input class="email" data-component="Email" type="text" placeholder="Enter Email" name="emailInput" required/>
       
-          <label class="plabel" data-component="Plabel" for="psw"><b>Password</b></label>
+          <label class="plabel" data-component="Plabel" for="psw"></label>
           <input class="password" data-component="Password" type="password" placeholder="Enter Password" name="passwordInput" required/>
       
-          <label class="repeat"  data-component="Repeat" for="psw-repeat"><b>Repeat Password</b></label>
+          <label class="repeat"  data-component="Repeat" for="psw-repeat"></label>
           <input type="password"  data-component="Password" placeholder="Repeat Password" name="psw-repeat" required/>
             
            

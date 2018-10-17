@@ -89,8 +89,12 @@ b {
 }
 
 .password{
+  margin-left: 300px; 
+}
+
+.enter {
   width: 300px; 
-  margin-left: 200px; 
+  margin-left: 200px;
 }
 
 .pass{

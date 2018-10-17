@@ -1,5 +1,5 @@
  import React, { Component } from 'react'; 
- import { BrowserRouter } from 'react-router-dom';
+ import { BrowserRouter, Route } from 'react-router-dom';
  //import PortfolioContainer from "./components/PortfolioContainer";
  import RideComparison from "./components/pages/RideComparison";
 
@@ -11,9 +11,11 @@ class App extends Component {
         return (
                  <BrowserRouter>
                     <div className="App">
-                        <Main />
+                        <Route exact path="/" component={Main} />
+                        <Route exact path="/compare" component={RideComparison}/>
+                        {/* <Main /> */}
                         {/* <PortfolioContainer /> */}
-                        <RideComparison />   
+                        {/* <n />    */}
                     </div>
                  </BrowserRouter>
         );

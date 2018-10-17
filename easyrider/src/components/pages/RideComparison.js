@@ -20,6 +20,11 @@ class GeoLocation extends React.Component {
     componentDidMount() {
         let currentTemp = localStorage.getItem("currentTemp");
         this.setState({ userWeather: currentTemp })
+
+        document.getElementById("easyRide").style.display = "none";
+        document.getElementById("sidebarNav").style.display = "none";
+        document.getElementById("registerDiv").style.display = "none";
+        document.getElementById("landingDiv").style.display = "none";
     };
 
 
@@ -93,9 +98,11 @@ class GeoLocation extends React.Component {
                             console.log(data);
                             var estimatedCostMax = data.data.cost_estimates[0].estimated_cost_cents_max / 100;
                             var estimatedCostMin = data.data.cost_estimates[0].estimated_cost_cents_min / 100;
+                            var estimatedDurationSeconds = data.data.cost_estimates[0].estimated_duration_seconds / 60;
                             var estimatedLyftCosts = {
                                 min: estimatedCostMin,
-                                max: estimatedCostMax
+                                max: estimatedCostMax,
+                                duration: estimatedDurationSeconds
                             }
                             this.setState({
                                 estimatedLyftCosts,
@@ -169,6 +176,7 @@ class GeoLocation extends React.Component {
 
                         }}>USD ${this.state.estimatedLyftCosts.min}-{this.state.estimatedLyftCosts.max}<a href="https://account.lyft.com/auth?next=https%3A%2F%2Fwww.lyft.com%2Flogin%2Fjump" style={{ color: "#D20085" }}><i className="material-icons right">thumb_up</i></a></p>
                         <p>Click on ... to see more ride types information</p>
+                        <p>Estimated Duration: <b>{Math.floor(this.state.estimatedLyftCosts.duration)}</b> minutes</p>
                     </div>
                     <div className="card-reveal">
                         <span className="card-title grey-text text-darken-4">Additional information<i className="material-icons right">close</i></span>
@@ -197,6 +205,7 @@ class GeoLocation extends React.Component {
                             color: "#0B0A1C"
                         }}>USD {this.state.uberData[this.state.uberData.length - 1].estimate}<a href="https://m.uber.com/ul/?client_id=jXjS0Z2p5GQyxIeJlr99Z13NUu8ZK14E" style={{ color: "#0B0A1C" }}><i className="material-icons right">thumb_up</i></a></p>
                         <p>Click on ... to see more ride types information</p>
+                        <p>Estimated duration: <b>{Math.floor(this.state.uberData[this.state.uberData.length-1].duration)/60} minutes</b></p>
                     </div>
                     <div className="card-reveal">
 
@@ -220,7 +229,7 @@ class GeoLocation extends React.Component {
     }
     render() {
         return (
-            <div className="container">
+            <div className="container" style={{backgroundColor: 'white'}}>
                 <div className="row">
                     <div className="col s8 offset-s2">
                         <h3 className="center-align">Compare Prices</h3>

@@ -9,4 +9,4 @@ const Lyft = () => (
   </div>
 );
 
-export default Lyft;
+//export default Lyft;

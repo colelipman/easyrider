@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -27,7 +28,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style type="text/css">
-
     .hidden.menu {
       display: none;
     }
@@ -36,18 +36,22 @@
       min-height: 700px;
       padding: 1em 0em;
     }
+
     .masthead .logo.item img {
       margin-right: 1em;
     }
+
     .masthead .ui.menu .ui.button {
       margin-left: 0.5em;
     }
+
     .masthead h1.ui.header {
       margin-top: 3em;
       margin-bottom: 0em;
       font-size: 4em;
       font-weight: normal;
     }
+
     .masthead h2 {
       font-size: 1.7em;
       font-weight: normal;
@@ -56,19 +60,24 @@
     .ui.vertical.stripe {
       padding: 8em 0em;
     }
+
     .ui.vertical.stripe h3 {
       font-size: 2em;
     }
-    .ui.vertical.stripe .button + h3,
-    .ui.vertical.stripe p + h3 {
+
+    .ui.vertical.stripe .button+h3,
+    .ui.vertical.stripe p+h3 {
       margin-top: 3em;
     }
+
     .ui.vertical.stripe .floated.image {
       clear: both;
     }
+
     .ui.vertical.stripe p {
       font-size: 1.33em;
     }
+
     .ui.vertical.stripe .horizontal.divider {
       margin: 3em 0em;
     }
@@ -76,6 +85,7 @@
     .quote.stripe.segment {
       padding: 0em;
     }
+
     .quote.stripe.segment .grid .column {
       padding-top: 5em;
       padding-bottom: 5em;
@@ -93,27 +103,30 @@
       .ui.fixed.menu {
         display: none !important;
       }
+
       .secondary.pointing.menu .item,
       .secondary.pointing.menu .menu {
         display: none;
       }
+
       .secondary.pointing.menu .toc.item {
         display: block;
       }
+
       .masthead.segment {
         min-height: 350px;
       }
+
       .masthead h1.ui.header {
         font-size: 2em;
         margin-top: 1.5em;
       }
+
       .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
       }
     }
-
-
   </style>
 
   <script src="assets/library/jquery.min.js"></script>
@@ -121,99 +134,103 @@
   <script src="dist/components/sidebar.js"></script>
   <script src="dist/components/transition.js"></script>
   <script>
-  $(document)
-    .ready(function() {
+    $(document)
+      .ready(function () {
 
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
+        // fix menu when passed
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function () {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function () {
+              $('.fixed.menu').transition('fade out');
+            }
+          })
+          ;
+
+        // create sidebar and attach to menu open
+        $('.ui.sidebar')
+          .sidebar('attach events', '.toc.item')
+          ;
+
+      })
       ;
-
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
   </script>
 </head>
-<body class="log" >
-  
-  <div id="root">
-  <!-- The above form looks like this -->
-<form class="login" data-component="Login">
-    <h1 class="head" data-component="Head" >
-        Easy Rider 
+
+<body class="log">
+
+  <div id="root"> </div>
+    <!-- The above form looks like this -->
+    <div id="landingDiv">
+    <form class="login" data-component="Login">
+      <h1 class="head" data-component="Head">
+        Easy Rider
       </h1>
-  <div class="row" data-component="Row">
-    <div class="six columns" data-component="Six">
-      <label class="mailabel" data-component="Mailabel"for="exampleEmailInput">E-Mail</label>
-      <input class="u-full-width" data-component="Full"  type="email" id="exampleEmailInput">
-    </div>
-    <div class="six columns" data-component="Six">
-      <label class="password" data-component="Password" >Password</label>
-      <input class="u-full-width" data-component="Full" type="password"> 
-      </select>
-    </div>
-  </div>
-  <input class="button-primary" data-component="Primary" type="submit" value="Submit">
-</form>
-<h5 class="bottom" data-component="Bottom">
-  Don't have an account with us yet?
-</h5>
-<button class="signup" data-component="Signup">
-  Register 
-</button>
-</div>
-
-<!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu">
-  <a class="active item">Home</a>
-  <a class="item">Work</a>
-  <a class="item">Company</a>
-  <a class="item">Careers</a>
-  <a class="item">Login</a>
-  <a class="item">Signup</a>
-</div>
-<div id="root"></div>
-
-<!-- Page Contents -->
-<div class="pusher">
-  <div class="ui inverted vertical masthead center aligned segment">
-
-    <div class="ui container">
-      <div class="ui large secondary inverted pointing menu">
-        <a class="toc item">
-          <i class="sidebar icon"></i>
-        </a>
-        <div class="right item">
-          <a class="ui inverted button">Register</a>
-    
+      <div class="row" data-component="Row">
+        <div class="six columns" data-component="Six">
+          <label class="mailabel" data-component="Mailabel" for="exampleEmailInput">E-Mail</label>
+          <input class="u-full-width" data-component="Full" type="email" id="exampleEmailInput">
+        </div>
+        <div class="six columns" data-component="Six">
+          <label class="password" data-component="Password">Password</label>
+          <input class="u-full-width" data-component="Full" type="password">
+          </select>
         </div>
       </div>
-    </div>
+      <input class="button-primary" data-component="Primary" type="submit" value="Submit">
+    </form>
+    <h5 class="bottom" data-component="Bottom">
+      Don't have an account with us yet?
+    </h5>
+    <button class="signup" data-component="Signup">
+      Register
+    </button>
+  </div>
 
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Easy Ride
-      </h1>
-      <h2>Find the right ride for you!</h2>
-      <div class="ui huge primary button">Log in<i class="right arrow icon"></i></div>
-    </div>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA7fHKImyZG52ysE_z6vx0IAoNnBc7PqM&callback=initMap">
-  </script>
+
   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu" id="sidebarNav">
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <a class="item">Login</a>
+    <a class="item">Signup</a>
+  </div>
+  <div id="root"></div>
+
+  <!-- Page Contents -->
+  <div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+
+      <div class="ui container" id="registerDiv">
+        <div class="ui large secondary inverted pointing menu">
+          <a class="toc item">
+            <i class="sidebar icon"></i>
+          </a>
+          <div class="right item">
+            <a class="ui inverted button">Register</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="ui text container" id="easyRide">
+        <h1 class="ui inverted header">
+          Easy Ride
+        </h1>
+        <h2>Find the right ride for you!</h2>
+        <div class="ui huge primary button">Log in<i class="right arrow icon"></i></div>
+      </div>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA7fHKImyZG52ysE_z6vx0IAoNnBc7PqM&callback=initMap">
+      </script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>

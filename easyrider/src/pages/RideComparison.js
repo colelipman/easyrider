@@ -56,7 +56,7 @@ class GeoLocation extends React.Component {
     };
     comparePrices = (e) => {
         e.preventDefault();
-        if (!this.state.address == "") {
+        if (!this.state.address === "") {
             const destinationUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + this.state.address + "&key=AIzaSyCA7fHKImyZG52ysE_z6vx0IAoNnBc7PqM";
             //Get lat and long from address
             // get address        

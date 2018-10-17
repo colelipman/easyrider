@@ -19,7 +19,7 @@
 
 h1 {
   font-family: 'Permanent Marker', cursive;
-  color: black ; 
+  color: gold ; 
 }
 
 h5{
@@ -58,4 +58,18 @@ label{
 
 .button-primary{
   margin-left: 50px; 
+}
+
+p{
+  color:white; 
+}
+
+
+.cancelbtn {
+  margin-right: 100px; 
+  background-color: gold; 
+}
+
+.signupbtn {
+background-color: gold; 
 }

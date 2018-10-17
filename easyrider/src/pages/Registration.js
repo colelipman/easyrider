@@ -21,7 +21,7 @@ class Registration extends Component {
           <input class="password" data-component="Password" type="password" placeholder="Enter Password" name="passwordInput" required/>
       
           <label class="repeat"  data-component="Repeat" for="psw-repeat"></label>
-          <input type="password"  data-component="Password" placeholder="Repeat Password" name="psw-repeat" required/>
+          <input class="pass" type="password"  data-component="Password" placeholder="Repeat Password" name="psw-repeat" required/>
             
            
             {/* <input class="box" data-component="Box" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> 

@@ -23,7 +23,12 @@ class Login extends Component {
       
     
    
-   <input className="button-primary" data-component="Primary" type="submit" value="Submit"/>
+   <button className="signin">
+   <a href="/Home">
+   Sign in 
+   </a>
+   </button>
+
  
  <h5 className="bottom" data-component="Bottom">
    Don't have an account with us yet?

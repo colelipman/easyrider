@@ -34,7 +34,7 @@ button{
 }
 
 .registration{
-  border: 1px; 
+  margin-left: 200px;
   
 
 }
@@ -62,6 +62,7 @@ label{
 
 p{
   color:white; 
+  margin-left: 200px ;
 }
 
 
@@ -76,4 +77,23 @@ background-color: gold;
 
 b {
   margin-right: 500px; 
+}
+
+.signin{
+  background-color: lightgray; 
+}
+
+.email{
+  width: 300px; 
+  margin-left: 200px; 
+}
+
+.password{
+  width: 300px; 
+  margin-left: 200px; 
+}
+
+.pass{
+  width: 300px; 
+  margin-left: 200px; 
 }

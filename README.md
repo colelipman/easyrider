@@ -11,3 +11,4 @@ Easy Rider App can:
 - Show you the time duration of the trip 
 - Give you different Uber prices on premium rides by clicking on the thumbs up button on the Uber tab 
 
+Check it out: https://easyrider3-.herokuapp.com/
